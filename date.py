@@ -16,11 +16,15 @@ class Date:
     @staticmethod
     def is_leap_year(year: int) -> bool:
         #año bisiesto: divisible entre 4 y 400 y no divisible entre 100
+
         resultado = False
+        
         if year % 4 == 0 and year % 100 != 0:
             resultado = True
         elif year % 400 == 0:
             resultado = True
+
+        return resultado
 
         #Otra opción es:  if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
     @staticmethod
