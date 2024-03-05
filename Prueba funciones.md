@@ -53,3 +53,6 @@ def myDiv(id:str, *clas:str, content:str)->str:
 
     resultado += '>' + content + '</div>'
     return resultado
+
+
+    
