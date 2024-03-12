@@ -1,4 +1,4 @@
 from vehiculo import Vehiculo
 
-class bicicleta(Vehiculo):
+class Bicicleta(Vehiculo):
     pass
