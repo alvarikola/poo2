@@ -1,7 +1,11 @@
 class FileWriter:
     def __init__(self, filename:str):
         self.filename = filename
-        self.i = open(self.filename, "w+r")
+
+        try:
+            self.i = open(self.filename, "r+")
+        except Exception:
+            self.i = open(self.filename, "w+")
 
     def write(self, mensaje:str):
         self.i.write(mensaje)
@@ -15,15 +19,16 @@ class FileWriter:
         self.i.close()
 
 
+if __name__ == "__main__":
+    def main():
+        pruebaw = FileWriter("fileWriter.txt")
+        pruebaw.write("hola buenos dias")
+        pruebaw.close()
 
-def main():
-    prueba = FileWriter("hola.txt")
-    prueba.write("hola buenos dias")
-    prueba.close()
-    prueba = FileWriter("hola.txt")
-    prueba.read()
-    prueba.close()
+        pruebar = FileWriter("fileWriter.txt")
+        print(pruebar.read())
+        pruebar.close()
 
 
 
-main()
+    main()
